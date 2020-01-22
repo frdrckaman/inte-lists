@@ -1,0 +1,4 @@
+[run]
+include = inte_lists/*
+omit = inte_lists/tests/*,inte_lists/migrations/*
+branch = 1
