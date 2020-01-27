@@ -1,5 +1,5 @@
 from django.conf import settings
-from edc_constants.constants import OTHER, UNKNOWN, DEAD, NONE
+from edc_constants.constants import OTHER, UNKNOWN, DEAD, NONE, NOT_APPLICABLE
 from edc_list_data import PreloadData
 from inte_prn.constants import (
     WITHDRAWAL,
@@ -8,14 +8,13 @@ from inte_prn.constants import (
     OTHER_RX_DISCONTINUATION,
 )
 
-
 list_data = {
-    "meta_lists.baselineconditions": [
+    "inte_lists.baselineconditions": [
         ("hypertension", "Hypertension "),
         ("diabetes", "Diabetes"),
         ("hiv_infection", "HIV Infection"),
     ],
-    "meta_lists.offstudyreasons": [
+    "inte_lists.offstudyreasons": [
         ("completed_followup", "Patient completed 12 months of follow-up"),
         ("clinical_endpoint", "Patient reached a clinical endpoint"),
         ("toxicity", "Patient experienced an unacceptable toxicity"),
@@ -34,6 +33,45 @@ list_data = {
             "treatment in the clinician’s opinion (specify below)",
         ),
         (OTHER, ("Other reason (specify below)"),),
+    ],
+    "inte_lists.hypertensiontreatment": [
+        ("thiazide_diuretics", "Thiazide diuretics"),
+        ("angiotensin_2", "Angiotensin 2 Receptor Blocker"),
+        ("ace_inhibitor", "ACE inhibitor"),
+        ("beta_blocker", "Beta blocker"),
+        ("calcium_channel_blocker", "Calcium channel blocker"),
+        (NOT_APPLICABLE, "Not applicable"),
+        (UNKNOWN, "Unknown"),
+        (OTHER, "Other treatment (specify below)"),
+    ],
+    "inte_lists.arvregimens": [
+        ("ABC_3TC/FTC", "ABC + 3TC/FTC"),
+        ("AZT_FTC/3TC", "AZT + FTC/3TC"),
+        ("TDF_FTC/3TC", "TDF + FTC/3TC"),
+        ("ATV_r", "ATV/r"),
+        ("DRV_r", "DRV/r"),
+        ("DTG", "DTG"),
+        ("EFV", "EFV"),
+        ("Lopinavir_r", "Lopinavir/r"),
+        ("NVP", "NVP"),
+        (NOT_APPLICABLE, "Not applicable"),
+        (UNKNOWN, "Unknown"),
+        (OTHER, "Other, specify"),
+    ],
+    "inte_lists.visitreaons": [
+        ("drug_refill", "Drug Refill"),
+        ("clinic_review", "Clinic Review"),
+        ("unwell", "Feeling unwell (self referral)"),
+        ("unscheduled", "Unscheduled"),
+    ],
+    "inte_lists.diabetestreatment": [
+        ("metformin_b", "Metformin (B)"),
+        ("glibenclamide_s", "Glibenclamide (S)"),
+        ("glimepiride_s", "Glimepiride (S)"),
+        ("gliclazide_s", "Gliclazide (S)"),
+        ("glipizide_s", "Glimepiride (S)"),
+        ("insulin", "Insulin"),
+        (OTHER, "Other, specify"),
     ],
 }
 
