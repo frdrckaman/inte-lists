@@ -3,13 +3,13 @@ from edc_list_data.admin import ListModelAdminMixin
 
 from .admin_site import inte_lists_admin
 from .models import (
-    BaselineConditions,
+    Conditions,
     OffstudyReasons,
 )
 
 
-@admin.register(BaselineConditions, site=inte_lists_admin)
-class BaselineConditionsAdmin(ListModelAdminMixin, admin.ModelAdmin):
+@admin.register(Conditions, site=inte_lists_admin)
+class ConditionsAdmin(ListModelAdminMixin, admin.ModelAdmin):
     pass
 
 

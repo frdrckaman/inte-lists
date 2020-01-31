@@ -9,10 +9,10 @@ from inte_prn.constants import (
 )
 
 list_data = {
-    "inte_lists.baselineconditions": [
-        ("hypertension", "Hypertension "),
-        ("diabetes", "Diabetes"),
-        ("hiv_infection", "HIV Infection"),
+    "inte_lists.conditions": [
+        ("hypertension", "Patient has high blood pressure (Hypertension)"),
+        ("diabetes", "Patient has high blood sugar (Diabetes)"),
+        ("hiv_infection", "Patient has HIV infection (HIV+)"),
     ],
     "inte_lists.offstudyreasons": [
         ("completed_followup", "Patient completed 12 months of follow-up"),
@@ -58,7 +58,7 @@ list_data = {
         (UNKNOWN, "Unknown"),
         (OTHER, "Other, specify"),
     ],
-    "inte_lists.visitreaons": [
+    "inte_lists.visitreasons": [
         ("drug_refill", "Drug Refill"),
         ("clinic_review", "Clinic Review"),
         ("unwell", "Feeling unwell (self referral)"),
@@ -69,7 +69,7 @@ list_data = {
         ("glibenclamide_s", "Glibenclamide (S)"),
         ("glimepiride_s", "Glimepiride (S)"),
         ("gliclazide_s", "Gliclazide (S)"),
-        ("glipizide_s", "Glimepiride (S)"),
+        ("glipizide_s", "Glipizide (S)"),
         ("insulin", "Insulin"),
         (OTHER, "Other, specify"),
     ],

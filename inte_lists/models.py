@@ -1,16 +1,16 @@
 from edc_list_data.model_mixins import ListModelMixin
 
 
-class ArvTreatment(ListModelMixin):
+class ArvRegimens(ListModelMixin):
     class Meta(ListModelMixin.Meta):
-        verbose_name = "ARV Treatment"
-        verbose_name_plural = "ARV Treatment"
+        verbose_name = "ARV Regimens"
+        verbose_name_plural = "ARV Regimens"
 
 
-class BaselineConditions(ListModelMixin):
+class Conditions(ListModelMixin):
     class Meta(ListModelMixin.Meta):
-        verbose_name = "Baseline Conditions"
-        verbose_name_plural = "Baseline Conditions"
+        verbose_name = "Conditions"
+        verbose_name_plural = "Conditions"
 
 
 class DiabetesTreatment(ListModelMixin):
